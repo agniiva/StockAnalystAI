@@ -1,5 +1,5 @@
 # AI Financial Analyst Bot
-Note: If you're searching Indian Stock use NSE at the end of the stock (Patanjali NSE)
+Note: If you're searching Any Stock use the TICKER SYMBOL (e.g. PATANJALI.NS) (in some cases normal names doesn't work) - I can improve on it, but who cares!!
 
 ## Overview
 
