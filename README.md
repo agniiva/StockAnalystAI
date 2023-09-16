@@ -31,10 +31,9 @@ Investing in the stock market often requires hours of research, financial litera
 https://github.com/agniiva/StockAnalystAI/assets/73607864/d3774b87-7052-4e15-b7ba-713cac61c995
 
 ## Images of the analysis
-<img width="990" alt="image" src="https://github.com/agniiva/StockAnalystAI/assets/73607864/43da0c32-eb86-4be7-b388-e7efa82bffc3">
+<img width="994" alt="image" src="https://github.com/agniiva/StockAnalystAI/assets/73607864/43da0c32-eb86-4be7-b388-e7efa82bffc3">
 <img width="994" alt="image" src="https://github.com/agniiva/StockAnalystAI/assets/73607864/a9a4a5bc-bcaf-4697-80c9-e2f0d812f008">
-![Uploading image.png…]()
-
+<img width="994" alt="image" src="https://github.com/agniiva/StockAnalystAI/assets/73607864/dbf8e850-0c48-4269-be70-30411a0da79b">
 
 
 ## Prerequisites
