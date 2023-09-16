@@ -42,9 +42,12 @@ def write_news_to_file(news, filename):
 def get_stock_evolution(company_name, period="1y"):
     # Get the stock information
     stock = yf.Ticker(company_name)
-
     # Get historical market data
-    hist = stock.history(period=period)
+    try:
+        hist = stock.history(period=period)
+    except Exception as e:
+        print(e)
+        return None
 
     # Convert the DataFrame to a string with a specific format
     data_string = hist.to_string()
@@ -62,14 +65,23 @@ def get_stock_evolution(company_name, period="1y"):
 def get_financial_statements(ticker):
     # Create a Ticker object
     company = Ticker(ticker)
+    valuation_measures = ""
 
     # Get financial data
     balance_sheet_data = company.balance_sheet()
-    balance_sheet = balance_sheet_data.to_string() if hasattr(balance_sheet_data, 'to_string') else balance_sheet_data
+    balance_sheet = balance_sheet_data.to_string() if hasattr(balance_sheet_data, 'to_string') else str(balance_sheet_data)
+    
     cash_flow_data = company.cash_flow(trailing=False)
-    cash_flow = cash_flow_data.to_string() if hasattr(cash_flow_data, 'to_string') else cash_flow_data
-    income_statement = company.income_statement().to_string()
-    valuation_measures = str(company.valuation_measures)  # This one might already be a dictionary or string
+    cash_flow = cash_flow_data.to_string() if hasattr(cash_flow_data, 'to_string') else str(cash_flow_data)
+
+    income_statement_data = company.income_statement()
+    income_statement = income_statement_data.to_string() if hasattr(income_statement_data, 'to_string') else str(income_statement_data)
+    
+    try:
+        valuation_measures = str(company.valuation_measures)  # This one might already be a dictionary or string
+    except Exception as e:
+        print(f"Error while getting valuation measures: {e}")
+        valuation_measures = "N/A"
 
     # Write data to file
     with open("investment.txt", "a") as file:
@@ -81,6 +93,7 @@ def get_financial_statements(ticker):
         file.write(income_statement)
         file.write("\nValuation Measures\n")
         file.write(valuation_measures)
+
 
 
 
