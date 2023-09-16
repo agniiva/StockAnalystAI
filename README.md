@@ -26,6 +26,17 @@ Investing in the stock market often requires hours of research, financial litera
 - **Financial Statements**: Uses yahooquery to fetch the balance sheet, cash flow, and income statements.
 - **AI-Powered Analysis**: Uses OpenAI's GPT-3 model to generate in-depth financial analysis and recommendations.
 
+## Working Demo
+
+https://github.com/agniiva/StockAnalystAI/assets/73607864/d3774b87-7052-4e15-b7ba-713cac61c995
+
+## Images of the analysis
+<img width="990" alt="image" src="https://github.com/agniiva/StockAnalystAI/assets/73607864/43da0c32-eb86-4be7-b388-e7efa82bffc3">
+<img width="994" alt="image" src="https://github.com/agniiva/StockAnalystAI/assets/73607864/a9a4a5bc-bcaf-4697-80c9-e2f0d812f008">
+![Uploading image.png…]()
+
+
+
 ## Prerequisites
 
 ### API Keys
