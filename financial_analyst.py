@@ -115,7 +115,7 @@ def get_data(company_name, company_ticker, period="1y", filename="investment.txt
 def financial_analyst(request):
     print(f"Received request: {request}")
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-0613",
+        model="gpt-3.5-turbo-16k-0613",
         messages=[{
             "role":
             "user",
@@ -173,7 +173,7 @@ def financial_analyst(request):
             content = file.read()[:14000]
 
         second_response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo-16k",
+            model="gpt-3.5-turbo-16k-0613",
             messages=[
                 {
                     "role": "user",
