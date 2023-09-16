@@ -5,7 +5,7 @@ Note: If you're searching Any Stock use the TICKER SYMBOL (e.g. PATANJALI.NS) (i
 
 ### What is AI Financial Analyst Bot?
 
-The AI Financial Analyst Bot is an intelligent application designed to provide comprehensive financial analysis and insights for any given company. It leverages OpenAI's GPT-3 model for analysis, yfinance for historical stock data, yahooquery for financial statements, and serper.dev for news retrieval.
+The AI Financial Analyst Bot is an intelligent application designed to provide comprehensive financial analysis and insights for any given company. It leverages OpenAI's GPT-3.5-turbo model for analysis, yfinance for historical stock data, yahooquery for financial statements, and serper.dev for news retrieval.
 
 ### Why is it Useful?
 
