@@ -4,7 +4,9 @@ import json
 from dotenv import load_dotenv
 import yfinance as yf
 from yahooquery import Ticker
-import openai
+from openai import OpenAI
+
+client = OpenAI()
 
 load_dotenv()
 serper_api_key = os.getenv("SERP_API_KEY")
@@ -114,7 +116,7 @@ def get_data(company_name, company_ticker, period="1y", filename="investment.txt
 
 def financial_analyst(request):
     print(f"Received request: {request}")
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo-16k-0613",
         messages=[{
             "role":
@@ -172,7 +174,7 @@ def financial_analyst(request):
         with open("investment.txt", "r") as file:
             content = file.read()[:14000]
 
-        second_response = openai.ChatCompletion.create(
+        second_response = client.chat.completions.create(
             model="gpt-4-1106-preview",
             messages=[
                 {
